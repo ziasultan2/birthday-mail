@@ -1,7 +1,11 @@
-FROM python:3.8
+FROM python:3.12
+
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
-WORKDIR /code
-COPY requirements.txt /code/
+
+RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
+
+COPY requirements.txt /usr/src/app/
 RUN pip install -r requirements.txt
-COPY . /code/
+
+COPY . /usr/src/app/

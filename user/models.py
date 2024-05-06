@@ -6,9 +6,6 @@ class User(models.Model):
 
    first_name = models.CharField(max_length = 30)
    last_name = models.CharField(max_length = 30)
-   email = models.CharField(max_length = 60)
+   email = models.CharField(max_length = 50)
    dob = models.DateField(null=False, blank=False)
-   phonenumber = models.IntegerField()
-
-   class Meta:
-      db_table = "users"
+   phonenumber = models.CharField(max_length=15)
