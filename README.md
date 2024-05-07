@@ -44,6 +44,7 @@ I've tested it locally and seems it's working fine for any reason if it doesn't 
 
 
 Without docker environment you can run the following command to run the project
+ - You will need to have redis installed as it's required to run celery
 
 1. pip install -r requirements.txt
 2. python manage.py runserver 0.0.0.0:8000
